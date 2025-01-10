@@ -1,0 +1,19 @@
+name: noTarget
+version: '1.0'
+main: cn.noTarget.Main
+api-version: '1.21'
+depend:
+  - Vault
+commands:
+  notarget:
+    description: Main command.
+    aliases:
+      - nt
+    usage: /<command>
+permissions:
+  notarget.reload:
+    description: Allow the player to reload the plugin.
+    default: op
+  notarget.price:
+    description: Allow the player to use the plugin.
+    default: true
