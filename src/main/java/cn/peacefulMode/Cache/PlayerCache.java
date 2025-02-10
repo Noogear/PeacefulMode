@@ -29,5 +29,20 @@ public class PlayerCache {
         return instance.targetPlayer;
     }
 
+    public static void toggle(UUID uuid) {
+        if (instance.targetPlayer.contains(uuid)) {
+            instance.targetPlayer.remove(uuid);
+        } else {
+            instance.targetPlayer.add(uuid);
+        }
+    }
+
+    public static void toggle(UUID uuid, boolean on){
+        if(on){
+            instance.targetPlayer.add(uuid);
+        } else{
+            instance.targetPlayer.remove(uuid);
+        }
+    }
 
 }

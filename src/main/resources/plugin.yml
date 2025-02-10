@@ -2,18 +2,19 @@ name: PeacefulMode
 version: '1.0'
 main: cn.peacefulMode.Main
 api-version: '1.21'
-depend:
-  - Vault
+softdepend:
+  - PlaceholderAPI
 commands:
   peacefulmode:
     description: Main command.
     aliases:
-      - nt
+      - peace
+      - pm
     usage: /<command>
 permissions:
   peacefulmode.reload:
-    description: Allow the player to reload the plugin.
     default: op
   peacefulmode.toggle:
-    description: Allow the player to use the plugin.
+    default: op
+  peacefulmode.toggle.other:
     default: op

@@ -1,4 +1,4 @@
 package cn.peacefulMode.Configuration.Form;
 
-public class ConfigurationPart {
+public abstract class ConfigurationPart {
 }

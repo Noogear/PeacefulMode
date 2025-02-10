@@ -1,4 +1,9 @@
 package cn.peacefulMode.Configuration.Form;
 
-public class Comments {
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Comments {
+    String[] value() default {};
 }
