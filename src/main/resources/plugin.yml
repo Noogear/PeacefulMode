@@ -1,19 +1,19 @@
-name: noTarget
+name: PeacefulMode
 version: '1.0'
-main: cn.noTarget.Main
+main: cn.peacefulMode.Main
 api-version: '1.21'
 depend:
   - Vault
 commands:
-  notarget:
+  peacefulmode:
     description: Main command.
     aliases:
       - nt
     usage: /<command>
 permissions:
-  notarget.reload:
+  peacefulmode.reload:
     description: Allow the player to reload the plugin.
     default: op
-  notarget.price:
+  peacefulmode.toggle:
     description: Allow the player to use the plugin.
-    default: true
+    default: op

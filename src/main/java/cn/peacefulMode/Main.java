@@ -1,5 +1,6 @@
-package cn.noTarget;
+package cn.peacefulMode;
 
+import cn.peacefulMode.Cache.PlayerCache;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -34,9 +35,9 @@ public final class Main extends JavaPlugin {
                 .map(UUID::fromString)
                 .collect(Collectors.toSet());
 
-        new Cache(uuidSet);
+        new PlayerCache(uuidSet);
         Bukkit.getPluginManager().registerEvents(new Listener(), this);
-        getCommand("notarget").setExecutor(new Command(this));
+        getCommand("peacefulmode").setExecutor(new Command(this));
         Bukkit.getScheduler().runTaskTimerAsynchronously(this, this::savePlayerUuid, 1, fileSaveInterval * 60 * 20L);
         econ = getServer().getServicesManager().getRegistration(Economy.class).getProvider();
     }
@@ -52,7 +53,7 @@ public final class Main extends JavaPlugin {
     }
 
     private void savePlayerUuid() {
-        List<String> uuidStrings = Cache.getTargetPlayer().stream()
+        List<String> uuidStrings = PlayerCache.getTargetPlayer().stream()
                 .map(UUID::toString)
                 .collect(Collectors.toList());
         playerConfig.set("uuid", uuidStrings);

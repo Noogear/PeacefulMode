@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn</groupId>
-    <artifactId>notarget</artifactId>
+    <artifactId>PeacefulMode</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>notarget</name>
+    <name>PeacefulMode</name>
 
     <properties>
         <java.version>21</java.version>
